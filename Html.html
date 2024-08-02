@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Registration Form</title> 
+  <link rel="stylesheet" type="text/css" href="Css.css">
+  <style>
+    body {
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 style="text-align:center;">LEARN WITH EXPERTS</h1>
+  <p style="text-align:center;"><b>MANGALORE</b></p>
+  <h2>REGISTER NOW!!</h2>
+  <form id="registrationForm" onsubmit="eventRegistration(event)">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" required>
+
+    <label for="payment">Preferred Payment Method:</label>
+    <select id="payment">
+      <option value="credit">Credit Card</option>
+      <option value="paypal">PayPal</option>
+      <option value="bank">Bank Transfer</option>
+    </select>
+
+    <label for="sessions">Choose Sessions:</label>
+    <div id="sessions">
+      <input type="checkbox" id="session1" value="Session 1"> <label for="session1">Session 1</label><br>
+      <input type="checkbox" id="session2" value="Session 2"> <label for="session2">Session 2</label><br>
+      <input type="checkbox" id="session3" value="Session 3"> <label for="session3">Session 3</label>
+    </div>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

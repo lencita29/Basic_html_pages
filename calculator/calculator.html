@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .calculator {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+      padding: 10px;
+    }
+    .button {
+      padding: 10px;
+      text-align: center;
+      background-color: #eaeaea;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Simple Calculator</h2>
+    <div class="calculator">
+      <input type="text" id="result" readonly>
+      <button class="button" onclick="clearResult()">C</button>
+      <button class="button" onclick="calculate()">=</button>
+      <button class="button" onclick="appendValue('/')">/</button>
+      <button class="button" onclick="appendValue('7')">7</button>
+      <button class="button" onclick="appendValue('8')">8</button>
+      <button class="button" onclick="appendValue('9')">9</button>
+      <button class="button" onclick="appendValue('*')">*</button>
+      <button class="button" onclick="appendValue('4')">4</button>
+      <button class="button" onclick="appendValue('5')">5</button>
+      <button class="button" onclick="appendValue('6')">6</button>
+      <button class="button" onclick="appendValue('-')">-</button>
+      <button class="button" onclick="appendValue('1')">1</button>
+      <button class="button" onclick="appendValue('2')">2</button>
+      <button class="button" onclick="appendValue('3')">3</button>
+      <button class="button" onclick="appendValue('+')">+</button>
+      <button class="button" onclick="appendValue('0')">0</button>
+      <button class="button" onclick="appendValue('.')">.</button>
+    </div>
+  </div>
+
+  <script>
+    function appendValue(value) {
+      document.getElementById("result").value += value;
+    }
+
+    function calculate() {
+      const result = eval(document.getElementById("result").value);
+      document.getElementById("result").value = result;
+    }
+
+    function clearResult() {
+      document.getElementById("result").value = "";
+    }
+  </script>
+</body>
+</html>

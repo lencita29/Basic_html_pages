@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="expt4.css"?>
+<!DOCTYPE student[ 
+<!ELEMENT student_info (h1,h2+,ad+)>
+<!ELEMENT ad (label)>
+<!ELEMENT usn (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT col (#PCDATA)>
+<!ELEMENT branch (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT label (#PCDATA|usn|name|col|branch|year|email)*>
+<!ELEMENT h2 (#PCDATA)>
+<!ELEMENT h1 (#PCDATA)>]>
+<student_info>
+<h1>Student information</h1>
+<h2>Student 1</h2>
+<ad><label>USN:<usn>4SH11CS021</usn></label></ad>
+<ad><label>NAME:<name>AAA</name></label></ad>
+<ad><label>COLLEGE:<col>SDIT</col></label></ad>
+<ad><label>BRANCH:<branch>CSE</branch></label></ad>
+<ad><label>YEAR:<year>2011</year></label></ad>
+<ad><label>EMAIL:<email>aaa@gmail.com</email></label></ad>
+
+<h2>Student 2</h2>
+<ad><label>USN:<usn>4SO21IS031</usn></label></ad>
+<ad><label>NAME:<name>BBB</name></label></ad>
+<ad><label>COLLEGE:<col>SJEC</col></label></ad>
+<ad><label>BRANCH:<branch>IS</branch></label></ad>
+<ad><label>YEAR:<year>2021</year></label></ad>
+<ad><label>EMAIL:<email>bbb@gmail.com</email></label></ad>
+
+<h2>Student 3</h2>
+<ad><label>USN:<usn>4SK20ME123</usn></label></ad>
+<ad><label>NAME:<name>CCC</name></label></ad>
+<ad><label>COLLEGE:<col>MIT</col></label></ad>
+<ad><label>BRANCH:<branch>MECH</branch></label></ad>
+<ad><label>YEAR:<year>2020</year></label></ad>
+<ad><label>EMAIL:<email>ccc@gamil.com</email></label></ad>
+</student_info>
+
+
